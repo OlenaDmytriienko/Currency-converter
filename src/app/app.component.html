@@ -1,0 +1,39 @@
+
+<header>
+  <h1>Currency converter</h1>
+  <div class="header__cur">
+  <p>USD: {{uahToUsd}}</p>
+  <p>Euro: {{uahToEuro}}</p>
+</div>
+</header>
+<div class="page__wrapper">
+<div class="main_container">
+  <div class="select-container">
+    <input type="text" id="name" name="name" class="form-control"
+    required maxlength="10" pattern="^[0-9]*$"
+    [(ngModel)]="inputValue" #name="ngModel">
+    <select #c1 name="" id="country1"  (mouseleave)="changeInputCurrency(c1.value)">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">Euro</option>
+    </select>
+    to
+    <select #c2 name="" id="country2" (mouseleave)="toOutputCurrency(c2.value)" >
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">Euro</option>
+    </select>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+    <div class="cur" *ngIf="name.errors?.['required']"> Enter quantity </div>
+    <div class="cur" *ngIf="name.errors?.['maxlength']"> Name must be at least 10 characters long.</div>
+    <div class="cur" *ngIf="name.errors?.['pattern']">Enter numbers only</div>
+    </div>
+  </div>
+  <button (click)="convert()">Submit</button>
+    <div class="result">
+      <p>{{inputCurrency}}</p>
+      <p>=</p>
+      <p>{{result}}{{outputCurrency}}</p>
+    </div>
+  </div>
+</div>

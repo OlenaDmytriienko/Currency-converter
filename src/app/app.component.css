@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "DS-Digital";
+  src: local("DS-Digital"),
+   url(../assets/DS-Digital/DS-DIGI.TTF) format("truetype");
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'DS-Digital';
+  color: black;
+  padding-bottom: 20px;
+}
+.header__cur{
+display: flex;
+gap: 20px;
+font-size: 25px;
+}
+.page__wrapper {
+  width: 500px;
+  margin: 0 auto;
+}
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 3px;
+  /* opacity: 0.9; */
+  background-color: rgba(232, 236, 241, 1);
+  font-family: sans-serif;
+}
+select {
+  color: white;
+  font-family: sans-serif;
+  border-radius: 3px;
+  border: 1px solid darkblue;
+  background-color: rgba(0, 0, 139, 0.809);
+}
+button {
+  color: white;
+  border-radius: 5px;
+  font-family: sans-serif;
+  border: 1px solid darkblue;
+  background-color: darkblue;
+}
+button:hover {
+  color: white;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: 1px solid darkblue;
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 255, 0.291);
+}
+.result {
+  padding: 10px 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid darkblue;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  background-color: rgba(0, 0, 255, 0.291);
+}
+.cur{
+  font-family: 'DS-Digital';
+  color: red;
+  font-size: 18px;
+  padding-top: 10px;
+  text-align: center;
+}
